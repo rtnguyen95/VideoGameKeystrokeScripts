@@ -14,9 +14,9 @@ However the .exe file should work as is, but it is currently only designed for t
 5. AFK
 
 6. When finished press `CTRL + P` to pause or `CTRL + ESC` to completely close the program.
-	**Sometimes a click or keystroke will come in between your CTRL + P / ESC so it won't actually pause or close.
+	**Sometimes a click or keystroke will come in between your `CTRL + P / ESC` so it won't actually pause or close.
 	You can just go into your tasks on the bottom right of your screen and close the program manually.
-	However I just press CTRL + ESC until the Windows start menu pops up. That's how I know it closed sucessfully via the quick command. 
+	However I just press `CTRL + ESC` until the Windows start menu pops up. That's how I know it closed sucessfully via the quick command. 
 
 
 Additional notes: You can probably adjust the click timings to do occult cubing for when you want to throw thousands of cubes to tier up mule gear.
