@@ -1,4 +1,4 @@
-﻿SetKeyDelay, (192, 207)
+﻿SetKeyDelay, (192, 225)
 ^q::reload
 
 ^j::
@@ -48,7 +48,7 @@
 	Sleep (1500)
 	circleMap()
 		Send, {v}
-			Send, {end}
+		Send, {end}
 	Sleep (1000)
 	Send, {d}
 	Sleep, (1000)
@@ -164,6 +164,7 @@ circleMap()
 
 jumpAttack()
 Sleep (2000)
+jumpAttack()
 jumpAttack()
 	faceRight()
 		Loop 5
