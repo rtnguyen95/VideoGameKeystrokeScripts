@@ -1,4 +1,4 @@
-﻿SetKeyDelay, (200, 205)
+﻿SetKeyDelay, (200, 225)
 ^q::reload
 
 ^j::
@@ -194,13 +194,12 @@ fullBuff()
 	Send {q}
 	Sleep (1200)
 	Send {1}
-	Sleep (1500)
-	Send {Shift}
+	Sleep (1550)
 	Send {Shift}
 	Send {Shift}
 	Sleep (1500)
 	Send {8}
-	Sleep (1500)
+	Sleep (1200)
 	Send {5}
 	Sleep (1400)
 }
