@@ -21,12 +21,12 @@ Loop {
 		arachnidReflection()
 			Loop 4
 			{
-				alternatingAttack5()
+				5AttackandTurn()
 			}
 		shadowBite()
 			Loop 3
 			{
-				alternatingAttack5()
+				5AttackandTurn()
 			}
 		circleMap()
 ; 2 minute rotation
@@ -44,12 +44,12 @@ Loop {
 
 			Loop 4
 			{
-				alternatingAttack5()
+				5AttackandTurn()
 			}
 		shadowBite()
 			Loop 3
 			{
-				alternatingAttack5()
+				5AttackandTurn()
 			}
 		circleMap()
 		
@@ -69,12 +69,12 @@ Loop {
 		dominion()
 			Loop 4
 			{
-				alternatingAttack5()
+				5AttackandTurn()
 			}
 		shadowBite()
 			Loop 3
 			{
-				alternatingAttack5()
+				5AttackandTurn()
 			}
 		circleMap()
 
@@ -176,7 +176,7 @@ faceRightAttack()
 	shadowSpark()
 }
 
-alternatingAttack5()
+5AttackandTurn()
 {
 	darkOmen()
 	shadowSpark()
