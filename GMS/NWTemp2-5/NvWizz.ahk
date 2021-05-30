@@ -3,87 +3,273 @@ SetKeyDelay, (100, 225)
 
 ^j::
 Loop {
-
+		Send {alt}
+		Send {End}
+		Sleep (500)
+		Send {b}
+		Sleep (400)
 		fullBuff()
-; 1 minute rotation
+;FIRST SET OF 3, ARACHNID IN 1
+;1 minute rotation
 
-	Loop 3
-	{
+		Send {ctrl}
+		Sleep (300)
 		deployGDS()
+		moveRightLong()
+		Sleep (300)
+		moveLeftLong()
 		cliffJumpToLeftWall()
 		;now at left wall
-		Sleep (1200)
+		faceRight()
+		jumpAttack()
+		Sleep (300)
 		arachnidReflection()
-		Loop 4
+
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		jumpAttackSequencetoLeft()
+		Loop 2
 		{
 		jumpAttackSequencetoRight()
 		jumpAttackSequencetoLeft()
 		}
 		jumpAttackSequencetoRight()
-
-		moveLeftShort()
+		jumpingShadowBite()
 		ropeLift()
-		darkOmen()
-	}
-		/*
+		Sleep (700)
 
+;2 minute rotation
+		Send {ctrl}
+		Sleep (300)
+		deployGDS()
+		moveRightLong()
+		Sleep (300)
+		moveLeftLong()
+		cliffJumpToLeftWall()
+		;now at left wall
 
-		circleMap()
-; 2 minute rotation
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
 
-				deployGDS()
-		darkOmen()
-			Loop 2
-			{
-				jumpAttack()
-			}
-		Sleep (400)
-		Send {Left down}
-		Send {Left up}
-		Sleep (200)
-
-			Loop 4
-			{
-				alternatingAttack5()
-			}
-		shadowBite()
-			Loop 3
-			{
-				alternatingAttack5()
-			}
-		circleMap()
-		
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		jumpAttackSequencetoLeft()
+		Loop 2
+		{
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+		}
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		ropeLift()
+		Sleep (700)
 
 ;3 minute rotation
-
-		deployGDS()
-		darkOmen()
-			Loop 2
-			{
-				jumpAttack()
-			}
+		Send {ctrl}
 		Sleep (300)
-		Send {Left down}
-		Send {Left up}
-
+		deployGDS()
+		faceRight()
+		jumpAttack()
+		Sleep (300)
+		faceLeft()
+		cliffJumpToLeftWall()
+		;now at left wall
+		Loop 2
+		{
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+		}
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		jumpAttackSequencetoLeft()
 		dominion()
-			Loop 4
-			{
-				alternatingAttack5()
-			}
-		shadowBite()
-			Loop 3
-			{
-				alternatingAttack5()
-			}
-		circleMap()
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		ropeLift()
+		Sleep (700)
+		Send {PgUp}
 
-		darkOmen()
-		Sleep (550)
-	}
-	Send {PgUp}
-	Sleep (300)
-	*/
+		Send {b}
+		Sleep (400)
+		fullBuff()
+;SECOND SET OF 3, ARACHNID IN 2
+
+;1 minute rotation
+
+		Send {ctrl}
+		Sleep (300)
+		deployGDS()
+		moveRightLong()
+		Sleep (300)
+		moveLeftLong()
+		cliffJumpToLeftWall()
+		;now at left wall
+
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		jumpAttackSequencetoLeft()
+		Loop 2
+		{
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+		}
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		ropeLift()
+		Sleep (700)
+
+;2 minute rotation
+		Send {ctrl}
+		Sleep (300)
+		deployGDS()
+		moveRightLong()
+		Sleep (300)
+		moveLeftLong()
+		cliffJumpToLeftWall()
+		;now at left wall
+		faceRight()
+		jumpAttack()
+		Sleep (300)
+		arachnidReflection()
+
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		jumpAttackSequencetoLeft()
+		Loop 2
+		{
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+		}
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		ropeLift()
+		Sleep (700)
+
+;3 minute rotation
+		Send {ctrl}
+		Sleep (300)
+		deployGDS()
+		moveRightLong()
+		Sleep (300)
+		faceLeft()
+		cliffJumpToLeftWall()
+		;now at left wall
+		Loop 2
+		{
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+		}
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		jumpAttackSequencetoLeft()
+		dominion()
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		ropeLift()
+		Sleep (700)
+		Send {PgUp}
+
+		Send {b}
+		Sleep (400)
+		fullBuff()
+;THIRD SET OF 3, ARACHNID IN 3
+;1 minute rotation
+
+		Send {ctrl}
+		Sleep (300)
+		deployGDS()
+		moveRightLong()
+		Sleep (300)
+		moveLeftLong()
+		cliffJumpToLeftWall()
+		;now at left wall
+
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		jumpAttackSequencetoLeft()
+		Loop 2
+		{
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+		}
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		ropeLift()
+		Sleep (700)
+
+;2 minute rotation
+		Send {ctrl}
+		Sleep (300)
+		deployGDS()
+		moveRightLong()
+		Sleep (300)
+		moveLeftLong()
+		cliffJumpToLeftWall()
+		;now at left wall
+
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		jumpAttackSequencetoLeft()
+		Loop 2
+		{
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+		}
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		ropeLift()
+		Sleep (700)
+
+;3 minute rotation
+		Send {ctrl}
+		Sleep (300)
+		deployGDS()
+		moveRightLong()
+		Sleep (300)
+		faceLeft()
+		cliffJumpToLeftWall()
+		;now at left wall
+		faceRight()
+		jumpAttack()
+		Sleep (300)
+		arachnidReflection()
+		Loop 2
+		{
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+		}
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		jumpAttackSequencetoLeft()
+		dominion()
+		jumpAttackSequencetoRight()
+		jumpAttackSequencetoLeft()
+		jumpAttackSequencetoRight()
+		jumpingShadowBite()
+		ropeLift()
+		Sleep (700)
+		Send {PgUp}
+
+
 }
 
 
@@ -106,16 +292,23 @@ arachnidReflection()
 darkOmen()
 {
 	Send {end}
-	Sleep (550)
+	Sleep (450)
 }
 
 jumpingDarkOmen()
 {
 	Send {alt}
 	Send {End}
-	Sleep (550)
+	Sleep (450)
 }
 
+jumpingShadowBite()
+{
+	Sleep (100)
+	Send {alt}
+	Send {v}
+	Sleep (550)
+}
 shadowBite()
 {
 	Send {v}
@@ -133,7 +326,6 @@ shadowSpark()
 	Send {a}
 	Sleep (500)
 }
-
 
 circleMap()
 {
@@ -166,9 +358,8 @@ circleMap()
 
 cliffJumpToLeftWall()
 {
-	Sleep (200)
 	jumpAttack()
-	Sleep (1000)
+	Sleep (600)
 	jumpAttack()
 	jumpAttack()
 }
@@ -185,6 +376,17 @@ ropeLiftShort()
 	}
 }
 
+jumpAttackSequencetoRightNoOmen()
+{
+		faceRight()
+		darkOmen()
+		Loop 4
+		{
+			jumpAttack()
+		}
+		moveLeftLong()
+}
+
 jumpAttackSequencetoRight()
 {
 		faceRight()
@@ -194,18 +396,18 @@ jumpAttackSequencetoRight()
 			jumpAttack()
 		}
 		moveLeftLong()
-		Sleep (400)
 		jumpingDarkOmen()
 }
 
 jumpAttackSequencetoLeft()
 {
 	faceLeft()
-	Loop 4
+	Loop 3
 	{
 		jumpAttack()
 	}
-	moveRightMedium()
+	moveRightShort()
+	darkOmen()
 }
 
 fullBuff()
@@ -239,9 +441,9 @@ jumpAttack()
 	Send, {alt}
 	Sleep, (75)
 	Send, {z}
-	Sleep, (100)
+	Sleep, (90)
 	Send, {a}
-	Sleep, (550)
+	Sleep, (555)
 }
 moveLeftLong()
 {
@@ -257,10 +459,16 @@ moveLeftShort()
 	Send, {Left up}
 }
 
-moveRightMedium()
+moveRightLong()
 {
 	Send, {Right down}
-	Sleep (300)
+	Sleep (400)
+	Send, {Right up}	
+}
+moveRightShort()
+{
+	Send, {Right down}
+	Sleep (150)
 	Send, {Right up}
 }
 
