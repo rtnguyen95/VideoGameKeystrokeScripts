@@ -71,8 +71,7 @@ Loop {
 		Send {ctrl}
 		Sleep (300)
 		deployGDS()
-		faceRight()
-		jumpAttack()
+		moveRightLong()
 		Sleep (300)
 		faceLeft()
 		cliffJumpToLeftWall()
@@ -292,14 +291,14 @@ arachnidReflection()
 darkOmen()
 {
 	Send {end}
-	Sleep (450)
+	Sleep (500)
 }
 
 jumpingDarkOmen()
 {
 	Send {alt}
 	Send {End}
-	Sleep (450)
+	Sleep (500)
 }
 
 jumpingShadowBite()
