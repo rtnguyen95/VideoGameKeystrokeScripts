@@ -10,43 +10,30 @@ SetKeyDelay, (100,120)
 	Send, {w}
 	Sleep, (2300)
 
-Loop 4{
-
-	Send, {right down}
-		Loop 7
-		{		
+	Loop 10
+	{
 		Send, {a}
-		Sleep, (1500)
-		}	
-	Send, {right up}
-	Sleep, (200)
-	Send, {a}
-	Send, {right down}
-		Loop 7
-		{		
-		Send, {a}
-		Sleep, (1500)
+		Sleep (750)
+		faceRight()
+		Loop 8
+		{
+			jumpAttack()
 		}
-
-
-	Send, {right up}
-	Send, {left down}
-		Loop 7
-		{		
-		Send, {a}
-		Sleep, (1500)
-		}	
-	Send, {left up}
-	Sleep, (200)
-	Send, {a}
-	Send, {left down}
-		Loop 7
-		{		
-		Send, {a}
-		Sleep, (1500)
+		Send, {delete}
+		faceLeft()
+		Loop 9
+		{
+			jumpAttack()
 		}
-	Send, {left up}
+		Send, {delete}
+	
+	moveRightMedium()
+	Sleep (400)
+	Send, {up}
+
+
 	}
+
 }
 
 		
@@ -56,6 +43,37 @@ Loop 4{
 ^Escape:: ExitApp
 ^p:: pause
 return
+
+
+jumpAttack()
+{
+	Send, {alt}
+	Sleep, (15)
+	Send, {z}
+	Sleep, 15
+	Send, {a}
+	Sleep, (750)
+}
+
+
+faceLeft()
+{
+	Send {Left down}
+	Send {Left up}
+}
+
+faceRight()
+{
+	Send {Right down}
+	Send {Right up}
+}
+
+moveRightMedium()
+{
+	Send, {Right down}
+	Sleep (130)
+	Send, {Right up}
+}
 
 ran(min, max)
 {
