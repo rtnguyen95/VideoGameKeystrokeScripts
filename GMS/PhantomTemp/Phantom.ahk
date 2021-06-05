@@ -1,47 +1,84 @@
-﻿SetKeyDelay, (100,150)
+﻿SetKeyDelay, (100,120)
 ^q::reload
 
 ^j::
 
-Loop 
-{	
-	Sleep, (3000)
+	Loop
+	{	
 	Send, {q}
 	Sleep, (2000)
 	Send, {w}
-	Sleep, (2000)
-	Loop 4
+	Sleep, (2300)
+
+	Loop 10
 	{
-	Send, {del}
-	AttackRight()
-	AttackLeft()
+		faceRight()
+		Send, {a}
+		Sleep (750)
+		Loop 8
+		{
+			jumpAttack()
+		}
+		Send, {delete}
+		faceLeft()
+		Loop 9
+		{
+			jumpAttack()
+		}
+		Send, {delete}
+	
+		Send {f}
+		Send {Right down}
+		Send {Right up}
+
+		Send {Up down}
+		Send {Up up}
+
+		Send {Right down}
+		Send {Right up}
+
+
 	}
-	Send {s up}
+
 }
+
+		
+
+
 
 ^Escape:: ExitApp
 ^p:: pause
 return
 
 
-AttackRight()
+jumpAttack()
 {
-	Send, {Right down}
-	Sleep, (200)
-	Send, {s down}
-	Sleep, (10000)
-	Send, {Right up}
-	
-}
-	
-AttackLeft()
-{
-	Send, {Left down}
-	Send, {s down}
-	Sleep, (10000)
-	Send, {Left up}
+	Send, {alt}
+	Send, {alt}
+	Send, {alt}
+	Send, {a}
+	Sleep, (650)
 }
 
+
+faceLeft()
+{
+	Send {Left down}
+	Send {Left up}
+}
+
+faceRight()
+{
+	Send {Right down}
+	Send {Right up}
+}
+
+moveRightMedium()
+{
+	Send, {Right down}
+	Sleep (130)
+	Send, {Right up}
+}
 
 ran(min, max)
 {
