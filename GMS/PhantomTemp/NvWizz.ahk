@@ -15,24 +15,35 @@
 		faceRight()
 		Send, {a}
 		Sleep (750)
-		Loop 8
+		Loop 2
+		{
+			jumpAttack()
+		}
+		Send {r}
+		Sleep (800)
+		Loop 7
 		{
 			jumpAttack()
 		}
 		Send, {delete}
 		faceLeft()
-		Loop 9
+		Loop 10
 		{
 			jumpAttack()
 		}
 		Send, {delete}
-	
-		Send {f}
+
+
+		Sleep (800)
+		Send {z}
+		Sleep (300)
 		Send {Right down}
 		Send {Right up}
+		Sleep (300)
 
 		Send {Up down}
 		Send {Up up}
+		Sleep (300)
 
 		Send {Right down}
 		Send {Right up}
