@@ -20,7 +20,7 @@
 			jumpAttack()
 		}
 		Send {r}
-		Sleep (800)
+		Sleep (1000)
 		Loop 7
 		{
 			jumpAttack()
@@ -39,11 +39,11 @@
 		Sleep (300)
 		Send {Right down}
 		Send {Right up}
-		Sleep (300)
+		Sleep (190)
 
 		Send {Up down}
 		Send {Up up}
-		Sleep (300)
+		Sleep (190)
 
 		Send {Right down}
 		Send {Right up}
