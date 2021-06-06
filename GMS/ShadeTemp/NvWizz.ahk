@@ -6,7 +6,9 @@
 Loop 
 {	
 	faceRight()
-	Loop 9
+	Send {Space}
+	Sleep (500)
+	Loop 8
 	{
 		jumpAttack()
 	}
@@ -41,7 +43,7 @@ jumpAttack()
 	Send, {a}
 	Send, {a}
 	Send, {a}	
-	Sleep, (770)
+	Sleep, (650)
 }
 
 
