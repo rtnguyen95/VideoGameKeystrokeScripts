@@ -10,11 +10,19 @@ Loop
 	{
 		jumpAttack()
 	}
+	Send, {delete}
 	faceLeft()
 	Loop 10
 	{
 		jumpAttack()
 	}
+
+	Send, {delete}
+	
+	moveRightMedium()
+	Sleep (400)
+	Send, {up}
+
 }
 
 ^Escape:: ExitApp
@@ -33,7 +41,7 @@ jumpAttack()
 	Send, {a}
 	Send, {a}
 	Send, {a}	
-	Sleep, (900)
+	Sleep, (770)
 }
 
 
