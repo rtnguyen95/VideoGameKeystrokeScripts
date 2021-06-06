@@ -5,24 +5,16 @@
 
 Loop 
 {	
-	Sleep, (3000)
-	Send, {q}
-	Sleep, (2000)
-	Loop 7
+	faceRight()
+	Loop 9
 	{
-	Send, {del}
-	Sleep, (500)
-Loop 7
-{
-	AttackRight()
-}
-Sleep (500)
-Loop 7
-{
-	AttackLeft()
-}
+		jumpAttack()
 	}
-	
+	faceLeft()
+	Loop 10
+	{
+		jumpAttack()
+	}
 }
 
 ^Escape:: ExitApp
@@ -30,34 +22,36 @@ Loop 7
 return
 
 
-AttackRight()
+
+
+jumpAttack()
 {
-	Send, {Left down}
-	Send, {Left up}
-	Sleep, (300)
-	Send, {z}
-	Sleep, (200)
-Loop 8{
+	Send, {alt}
+	Send, {alt}
+	Send, {alt}
 	Send, {a}
-	}
+	Send, {a}
+	Send, {a}
+	Send, {a}	
+	Sleep, (900)
 }
-	
-AttackLeft()
+
+
+faceLeft()
+{
+	Send {Left down}
+	Send {Left up}
+}
+
+faceRight()
+{
+	Send {Right down}
+	Send {Right up}
+}
+
+moveRightMedium()
 {
 	Send, {Right down}
+	Sleep (130)
 	Send, {Right up}
-	Sleep, (300)
-	Send, {z}
-	Sleep, (200)
-Loop 8{
-	Send, {a}
-	}
 }
-
-
-ran(min, max)
-{
-	random, ran, min, max
-return ran
-}
-	
