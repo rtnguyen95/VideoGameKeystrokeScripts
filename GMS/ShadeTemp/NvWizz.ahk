@@ -7,7 +7,7 @@ Loop
 {	
 	faceRight()
 	Send {Space}
-	Sleep (500)
+	Sleep (650)
 	Loop 8
 	{
 		jumpAttack()
