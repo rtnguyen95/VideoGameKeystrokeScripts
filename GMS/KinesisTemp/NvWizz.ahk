@@ -1,4 +1,4 @@
-﻿SetKeyDelay, (80,100)
+﻿SetKeyDelay, (110,100)
 ^q::reload
 
 ^j::
