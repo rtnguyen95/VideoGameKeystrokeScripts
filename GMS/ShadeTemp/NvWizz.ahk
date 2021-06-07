@@ -6,7 +6,10 @@
 Loop 
 {	
 	faceRight()
-	Send {Space}
+	Send, {a}
+	Send, {a}
+	Send, {a}
+	Send, {a}	
 	Sleep (650)
 	Loop 8
 	{
