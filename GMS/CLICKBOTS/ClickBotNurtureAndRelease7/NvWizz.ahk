@@ -65,6 +65,7 @@ Loop
 	Loop 7
 	{
 	MouseClick, right, 85, 722
+	MouseClick, left, 76, 631
 	MouseClick, left, 489, 448
 
     Send, {Enter}
