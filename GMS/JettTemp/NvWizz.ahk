@@ -11,37 +11,25 @@ Loop
 	{
 		Send {delete}
 	Send {right down}
-	Loop 4
+	Loop 7
 	{
 		jumpAttack()		
 	}
 	Send {right up}
 
-
+		Send {delete}
 	faceLeft()
 	Send {left down}
-	Loop 4
+	Loop 9
 	{
 		jumpAttack()		
 	}
 	Send {left up}
 
-	Send {right down}
-	Loop 2
-	{
-		doubleJumpAttack()		
-	}
-	Send {right up}
-
-	faceLeft()
-	Send {left down}
-	Loop 4
-	{
-		jumpAttack()		
-	}
-	Send {left up}
-	}
-	
+	Sleep (500)
+	moveRightMedium()
+	Sleep (400)
+	Send, {up}
 
 }
 
@@ -55,6 +43,8 @@ Buff()
 Sleep, (2000)
 Send {q}
 Sleep, (1500)
+Send {w}
+Sleep (500)
 }
 
 
@@ -67,7 +57,7 @@ doubleJumpAttack()
 	Send, {z}
 	Sleep, 50
 	Send, {a}
-	Sleep, (750)
+	Sleep, (450)
 }
 	
 jumpAttack()
@@ -77,7 +67,7 @@ jumpAttack()
 	Send, {z}
 	Sleep, 15
 	Send, {a}
-	Sleep, (750)
+	Sleep, (450)
 }
 
 faceLeft()

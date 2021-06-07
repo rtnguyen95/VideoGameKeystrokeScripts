@@ -74,10 +74,3 @@ moveRightMedium()
 	Sleep (130)
 	Send, {Right up}
 }
-
-ran(min, max)
-{
-	random, ran, min, max
-return ran
-}
-	
