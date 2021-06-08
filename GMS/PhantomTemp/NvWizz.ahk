@@ -9,6 +9,8 @@
 	Sleep, (2000)
 	Send, {w}
 	Sleep, (2300)
+	Send, {Shift}
+	Sleep (1000)
 
 	Loop 10
 	{

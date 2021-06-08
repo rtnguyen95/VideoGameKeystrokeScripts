@@ -1,4 +1,4 @@
-SetKeyDelay, (100,200)
+SetKeyDelay, (100,180)
 ^q::reload
 
 ^j::
@@ -10,6 +10,7 @@ Loop
 	Loop 7
 	{
 		Send {delete}
+	Send {a}
 	Send {right down}
 	Loop 7
 	{
@@ -30,7 +31,7 @@ Loop
 	moveRightMedium()
 	Sleep (400)
 	Send, {up}
-
+	}
 }
 
 ^Escape:: ExitApp
@@ -40,11 +41,10 @@ return
 
 Buff()
 {
-Sleep, (2000)
-Send {q}
-Sleep, (1500)
 Send {w}
 Sleep (500)
+Send {q}
+Sleep, (1500)
 }
 
 
@@ -57,7 +57,7 @@ doubleJumpAttack()
 	Send, {z}
 	Sleep, 50
 	Send, {a}
-	Sleep, (450)
+	Sleep, (700)
 }
 	
 jumpAttack()
@@ -67,7 +67,14 @@ jumpAttack()
 	Send, {z}
 	Sleep, 15
 	Send, {a}
-	Sleep, (450)
+	Sleep, (700)
+}
+
+moveRightMedium()
+{
+	Send, {Right down}
+	Sleep (70)
+	Send, {Right up}
 }
 
 faceLeft()
