@@ -1,4 +1,4 @@
-SetKeyDelay, (100,180)
+SetKeyDelay, (110,180)
 ^q::reload
 
 ^j::
@@ -67,7 +67,7 @@ jumpAttack()
 	Send, {z}
 	Sleep, 15
 	Send, {a}
-	Sleep, (700)
+	Sleep, (840)
 }
 
 moveRightMedium()
