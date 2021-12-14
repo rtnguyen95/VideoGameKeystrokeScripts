@@ -1,4 +1,4 @@
-SetKeyDelay, (44)
+SetKeyDelay, (57)
 ^q::reload
 
 ^j::
@@ -132,8 +132,7 @@ circleMap()
 	Sleep 250
 	;2nd top plat, left wall
 	TeleUp()
-	TeleLeft()
-	moveLeftShort()
+	moveLeftLong()
 
 	Loop 2
 	{
@@ -227,8 +226,7 @@ circleMapDomain() ;~40 seconds
 	Sleep 250
 	;2nd top left plat, left wall
 	TeleUp()
-	TeleLeft()
-	moveLeftShort()
+	moveLeftLong()
 	Loop 2{
 		Loop 2
 		{
@@ -285,10 +283,7 @@ downJump()
 {
 	Send {Down down}
 	Send {alt}
-	Send {Down up}
-
-	Send {Down down}
-	Sleep 350
+	Sleep 400
 	Send {z}
 	Send {Down up}
 	Sleep (600)
@@ -322,7 +317,7 @@ domain()
 SummonBoss()
 {
 	Send {f}
-	Sleep (315)
+	Sleep (350)
 	Send {f}
 	Sleep (700)
 }
@@ -352,7 +347,7 @@ TeleLeft()
 	Send {Left down}
 	Send {z}
 	Send {Left up}
-	Sleep 500
+	Sleep 540
 }
 
 TeleRight()
@@ -360,7 +355,7 @@ TeleRight()
 	Send {Right down}
 	Send {z}
 	Send {Right up}
-	Sleep 500
+	Sleep 540
 }
 
 TeleDown()
@@ -368,7 +363,7 @@ TeleDown()
 	Send {Down down}
 	Send {z}
 	Send {Down up}
-	Sleep 500
+	Sleep 540
 }
 
 
@@ -377,7 +372,7 @@ TeleUp()
 	Send {Up down}
 	Send {z}
 	Send {Up up}
-	Sleep 500
+	Sleep 540
 }
 
 ShikiExoCombo()
@@ -424,7 +419,7 @@ FaceLeft()
 moveLeftVeryShort()
 {
 	Send, {Left down}
-	Sleep (45)
+	Sleep 65
 	Send, {Left up}	
 }
 moveLeftShort()
