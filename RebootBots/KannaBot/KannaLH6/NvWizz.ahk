@@ -1,4 +1,4 @@
-SetKeyDelay, (57)
+SetKeyDelay, (37)
 ^q::reload
 
 ^j::
@@ -8,10 +8,13 @@ Loop
 	;START KANNA 2ND TOP HIGHEST, RIGHT-SIDE PLATFORM. STAND ON TALL BARREL
 	Sleep 300
 	NineTailFury()
+	;summon haku
 	Send {w}
 	Sleep (150)
+	;mana balance
 	Send {1}
 	Sleep 300
+	; summon yuki
 	Send {3}
 	Sleep 300
 	Loop 2
@@ -21,13 +24,13 @@ Loop
 	SummonBoss()
 	TeleRight()
 	TeleRight()
+	;loot cycle with domain; 1st minute kishin cyclze
 
-	;loot cycle with domain; 1st minute kishin cycle
 	circleMapDomain()
 
 	FaceRight()
 	VanqCharge()
-	Loop 4
+	Loop 2
 	{
 		ShikiLeft()
 		ShikiRight()
@@ -55,10 +58,10 @@ Loop
 	TeleLeft()
 	circleMap() ; loot, no domain, 2nd minute kishin
 	
-	Loop 4
+	Loop 1
 	{
 		ShikiExoCombo()
-		Sleep 500
+		Sleep 510
 	}
 	SummonBossFromRightPos()
 	ShikiExoCombo()
@@ -67,11 +70,12 @@ Loop
 	TeleLeft()
 	circleMap() ; loot, no domain, 3rd minute kishin
 
-	Loop 5
+	Loop 3
 	{
 		ShikiExoCombo()
-		Sleep 500
+		Sleep 510
 	}
+	SengokuForce()
 
 }
 
@@ -98,21 +102,20 @@ circleMap()
 	TeleRight()
 	Sleep 500
 	TeleLeft()
-
+	shikiRight()
+	shikiLeft()
 	Loop 2
 	{
 		TeleLeft()
 	}
 	ShikiRight()
 	ShikiLeft()
-	Loop 2
-	{
-		TeleLeft()
-	}
+	TeleLeft()
 	ShikiExoCombo()
 	Sleep 450
 	;bottom left corner
 	LucidSoul()
+	TeleLeft()
 	moveRightMedium()
 	TeleLeft()
 	moveLeftShort()
@@ -121,6 +124,8 @@ circleMap()
 	upJumpTele()
 	;2nd bottom left plat
 	TeleRight()
+	ShikiLeft()
+	ShikiRight()
 	NineTailFury()
 	TeleLeft()
 	TeleLeft()
@@ -205,7 +210,9 @@ circleMapDomain() ;~40 seconds
 	ShikiExoCombo()
 	Sleep 450
 	;bottom left corner
+	TeleRight()
 	LucidSoul()
+	TeleLeft()
 	moveRightMedium()
 	TeleLeft()
 	Sleep 300
@@ -221,10 +228,12 @@ circleMapDomain() ;~40 seconds
 	Sleep 300
 	TeleRight()
 	upJumpTele()
-	NineTailFury()
+	;2nd top left plat
+	ShikiLeft()
+	shikiRight()
 	TeleLeft()
 	Sleep 250
-	;2nd top left plat, left wall
+	;top left plat, left wall
 	TeleUp()
 	moveLeftLong()
 	Loop 2{
@@ -254,45 +263,28 @@ circleMapDomain() ;~40 seconds
 	}
 }
 ;-------------------------------------------------------------------
+
 OniLord()
 {
 	Send {l}
-	Sleep 500
+	Sleep 550
 }
 SengokuForce()
 {
 	Send {F10}
-	Sleep 700
+	Sleep 750
 }
 LucidSoul()
 {
-	Send {5}
-	Sleep 950
+	Send {4}
+	Sleep 1000
 }
 
-upJumpTele()
-{
-	Send {alt}
-	Send {up down}
-	Send {z}
-	Send {up up}
-	Sleep (500)
-
-}
-downJump()
-{
-	Send {Down down}
-	Send {alt}
-	Sleep 400
-	Send {z}
-	Send {Down up}
-	Sleep (600)
-}
 
 NineTailFury()
 {
 	Send {r}
-	Sleep (1500)
+	Sleep (1550)
 }
 
 VanqCharge()
@@ -306,20 +298,23 @@ VanqCharge()
 kishin()
 {
 	Send {d}
-	Sleep (700)
+	Sleep (750)
 }
 
 domain()
 {
 	Send {e}
-	Sleep (500)
+	Sleep (550)
 }
 SummonBoss()
 {
 	Send {f}
-	Sleep (350)
+	Sleep (1200)
 	Send {f}
-	Sleep (700)
+	Send {f}
+	Send {f}
+		Send {f}
+	Send {f}
 }
 
 SummonBossFromRightPos()
@@ -339,40 +334,64 @@ SummonBossFromRightPos()
 ExoCharm()
 {
 	Send {a}
-	Sleep (1100)
+	Sleep (1150)
 }
 
 TeleLeft()
 {
 	Send {Left down}
+	Sleep 75
 	Send {z}
 	Send {Left up}
-	Sleep 540
+	Sleep 500
 }
 
 TeleRight()
 {
 	Send {Right down}
+		Sleep 75
 	Send {z}
 	Send {Right up}
-	Sleep 540
+	Sleep 500
 }
 
 TeleDown()
 {
 	Send {Down down}
+		Sleep 75
 	Send {z}
 	Send {Down up}
-	Sleep 540
+	Sleep 500
 }
 
 
 TeleUp()
 {
 	Send {Up down}
+		Sleep 75
 	Send {z}
 	Send {Up up}
-	Sleep 540
+	Sleep 500
+}
+
+upJumpTele()
+{
+	Send {alt}
+	Sleep 180
+	Send {up down}
+	Send {z}
+	Send {up up}
+	Sleep 500
+
+}
+downJump()
+{
+	Send {Down down}
+	Send {alt}
+	Sleep 400
+	Send {z}
+	Send {Down up}
+	Sleep (600)
 }
 
 ShikiExoCombo()
@@ -390,17 +409,17 @@ ShikiLeft()
 	{
 	Send, {Space}
 	}	
-	Sleep, (425)
+	Sleep, 475
 }
 
 ShikiRight()
 {
 	faceRight()
-	Loop 4
+	Loop 5
 	{
 	Send, {Space}
 	}	
-	Sleep, 425
+	Sleep, 475
 }
 
 FaceRight()
@@ -419,7 +438,7 @@ FaceLeft()
 moveLeftVeryShort()
 {
 	Send, {Left down}
-	Sleep 65
+	Sleep 300
 	Send, {Left up}	
 }
 moveLeftShort()
@@ -432,7 +451,7 @@ moveLeftShort()
 moveRightMedium()
 {
 	Send, {Right down}
-	Sleep (275)
+	Sleep 510
 	Send, {Right up}
 }
 
