@@ -3,14 +3,14 @@
 
 ^j::
 
-Loop 10
+Loop 36
 {	
 	Sleep (2000)
 	MouseClick, left, 1223, 552
 	Sleep (1000)
 	Send, {Enter}
 	Sleep (5000)
-	MouseClick, left, 1036, 537
+	MouseClick, left, 983, 542
 	
 
 	Sleep (300000)
