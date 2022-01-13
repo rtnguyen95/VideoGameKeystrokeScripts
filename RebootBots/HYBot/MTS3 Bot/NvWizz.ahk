@@ -1,4 +1,4 @@
-﻿SetKeyDelay, (65,100)
+SetKeyDelay, (60)
 ^q::reload
 
 ^j::
@@ -6,34 +6,51 @@
 	Loop 
 {
     totem()
-
+    arachnidreflection()
     Gate()
     deployTigerRotation()
-    circleMap()
+    circleMap()d
     Gate()
-    totem()
     20SRotation()
     ; 50s, new vortex ghost
     deployVortexGhost()
     moveRightMedium()
+    Sleep 400
+    Gate()
 
     50SRotation()
-    totem()
     ;100s, no tiger, coin rotation + circlemap
-
-    deployCoinRotation()
-    circleMap()
+    Sleep 300
     totem()
+    Sleep 700
+    Gate()
+    deployCoinRotation()
+    circleMapTPGate()
+    Gate()
     20SRotation()
 
-    ;~150s,  new vortex ghost
 
+    ;~150s,  new vortex ghost
+    Sleep 300
+    totem()
+    Sleep 300
     deployVortexGhost()
     moveRightMedium()
+    Sleep 400
+    Gate()
 
-    totem()
-    50SRotation()
+    45SRotation()
+
+    cloudUp()
+    Send {Down down}
+    Send {Right down}
+    Sleep 500
+    Send {Right up}
+    Sleep 1500
+    Send {Down up}
+    Sleep 2500
     
+
 
 }
 
@@ -41,13 +58,18 @@
 ^p:: pause
 return
 
+totem()
+{
+    Send {b}
+    Sleep 700
+}
 
         20SRotation()
         {
             Loop 2
             {
 
-            Loop 4
+            Loop 6
             {
                 gale()
                 faceLeft()
@@ -62,72 +84,72 @@ return
             }            
         }
 
-        55SRotation()
-        {
-            Loop 7
-            {
-                galeInPlace()
-            }
-            cudgel()
-            faceLeft()
-            fan()
-
-            faceRight()
-
-            Loop 2
-            {
-
-            Loop 6
-            {
-                gale()
-                faceLeft()
-                gale()
-                faceRight()
-            }
-            fan()
-            faceLeft()
-            fan()
-            faceRight()
-
-            }
-        }
-
-        50SRotation()
-        {
-            Loop 5
-            {
-                galeInPlace()
-            }
-            cudgel()
-            faceLeft()
-            fan()
-
-            faceRight()
-
-            Loop 2
-            {
-
-            Loop 6
-            {
-                gale()
-                faceLeft()
-                gale()
-                faceRight()
-            }
-            fan()
-            faceLeft()
-            fan()
-            faceRight()
-
-            }
-        }
-
-
-
-
-totem()
+45SRotation()
 {
-    Send {b}
+    Loop 6
+    {
+        galeInPlace()
+    }
+    cudgel()
+    faceLeft()
+    fan()
+
+    faceRight()
+
+    Loop 2
+    {
+
+    Loop 4
+    {
+        gale()
+        faceLeft()
+        gale()
+        faceRight()
+    }
+    fan()
+    faceLeft()
+    fan()
+    faceRight()
+    Sleep 700
+    }
+}
+
+50SRotation()
+{
+    Loop 6
+    {
+        galeInPlace()
+    }
+    cudgel()
+    faceLeft()
+    fan()
+
+    faceRight()
+
+    Loop 2
+    {
+
+    Loop 5
+    {
+        gale()
+        faceLeft()
+        gale()
+        faceRight()
+    }
+    fan()
+    faceLeft()
+    fan()
+    faceRight()
+    Sleep 1000
+
+    }
+}
+
+
+
+arachnidreflection()
+{
+    Send, {Home}
     Sleep 700
 }
 
@@ -137,34 +159,21 @@ Gate()
     Sleep 900
 }
 
-deployTigerRotation()
-{
-    Send {3}
-    Sleep (1000)
-    cloudUp()
-    Sleep 500
-    Send {y}
-    Sleep 730
-    Send {w}
-    Sleep 700
-    faceRight()
-    flashJump()
-    ropeLift()
-    Send {1}
-    Sleep 400
-    Send {1}
-    Sleep (340)
-    Send {2}
-    Sleep 750
-    Send {t}
-
-    Sleep 750
-}
 
 circleMap()
 {
+    moveLeftShort()
+    Sleep 700
+    moveRightLong()
+    Sleep 300
+    moveLeftMedium()
+    Sleep 300
     downJump()
-    Sleep 2000
+    Sleep 1500
+
+    Send {w}
+    Sleep 700
+    faceRight()
     jumpAttack()
     jumpAttack()
     faceLeft()
@@ -178,7 +187,10 @@ circleMap()
     jumpAttack()
 
     cloudUp()
-    Sleep 1000
+    Sleep 250
+    moveLeftMedium()
+    Sleep 100
+    moveRightMedium()
     moveRightLong()
     Sleep 300
 
@@ -189,15 +201,81 @@ circleMap()
     fan()
     faceRight()
     Sleep 500
+    moveRightMedium()
+    Sleep 1100
     
     flashJump()
-    Sleep 700
+    Sleep 1000
 
-    downJump()
-    Sleep 300
-    moveLeftMedium()
+
 }
 
+circleMapTPGate()
+{
+    moveLeftShort()
+    Sleep 700
+    moveRightLong()
+    Sleep 300
+    moveLeftMedium()
+    Sleep 300
+    downJump()
+    Sleep 1500
+    Send {w}
+    Sleep 700
+    faceRight()
+    jumpAttack()
+    jumpAttack()
+    faceLeft()
+
+    Loop 6
+    {
+        jumpAttack()
+    }
+
+    faceRight()
+    jumpAttack()
+
+    cloudUp()
+    Sleep 250
+    moveLeftMedium()
+    Sleep 100
+    moveRightMedium()
+    moveRightLong()
+    Sleep 300
+
+    ropeLift()
+
+    fan()
+    faceLeft()
+    fan()
+    faceRight()
+    Sleep 500
+    MoveRightLong()
+    Sleep 1100
+}
+
+deployTigerRotation()
+{
+    Send {3}
+    Sleep (1000)
+    cloudUp()
+    Sleep 400
+    Send {y}
+    Sleep 680
+    faceRight()
+    Sleep 250
+    flashJump()
+    ropeLift()
+    Send {1}
+    Sleep 300
+    Send {1}
+    Sleep 600
+    Send {2}
+    Sleep 1400
+    Send {t}
+    Sleep 750
+
+}
 deployCoinRotation()
 {
     Sleep 750
@@ -212,14 +290,14 @@ deployCoinRotation()
     Sleep 630
     moveRightMedium()
     faceRight()
+    Sleep 250
     flashJump()
     ropelift()
     Send {2}
     Sleep (750)
     Send {t}
-    Sleep 750
-    Send {w}
-    Sleep 700
+    Sleep 1000
+
 }
 
 
@@ -241,8 +319,7 @@ deployVortexGhost()
     Sleep (400)
     faceLeft()
     jumpAttack()
-    Sleep 400
-    downJump()
+
 }
 
 fullBuff()
@@ -269,11 +346,12 @@ flashJump()
 
 jumpAttack()
 {
+    Sleep 50
     Send, {alt}
 	Send, {z}
 	Sleep, (100)
 	Send, {a}
-	Sleep, (725)
+	Sleep, (625)
 }
 
 ran(min, max)
@@ -382,28 +460,28 @@ moveRightShort()
 moveRightMedium()
 {
 	Send, {Right down}
-	Sleep (350)
+	Sleep (400)
 	Send, {Right up}
 }
 
 moveRightLong()
 {
 	Send, {Right down}
-	Sleep (600)
+	Sleep (720)
 	Send, {Right up}
 }
 
 moveLeftShort()
 {
     Send {Left down}
-    Sleep (130)
+    Sleep (175)
     Send {Left up}
 }
 
 moveLeftMedium()
 {
     Send {Left down}
-    Sleep (350)
+    Sleep (400)
     Send {Left up}
 }
 

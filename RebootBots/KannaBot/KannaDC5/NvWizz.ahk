@@ -49,7 +49,12 @@ Loop
 	circleMap() ;circle map has a summon buss feature
 
 	;Current position RIGHT under rope
-	RightAttackSequence(3)
+	RightAttackSequence(1)
+	
+	TeleLeft(3)
+	SummonBoss()
+	TeleRight(3)
+	RightAttackSequence(2)
 
 }
 
@@ -67,6 +72,7 @@ circleMap()
 	OniLord()
 	TeleRight(1)
 	TeleDown(1)
+	Sleep 800
 	TeleLeft(3)
 	NineTailFury()
 	LucidSoul()
@@ -107,7 +113,7 @@ circleMapDomain()
 {
 	TeleDown(1)
 	TeleRight(1)
-	Sleep 300
+	Sleep 750
 	TeleLeft(1)
 	Sleep 200
 	domain()
@@ -128,7 +134,7 @@ circleMapDomain()
 	ShikiLeft()
 	ShikiRight()
 	TeleRight(1)
-	Sleep 200
+	Sleep 800
 	TeleDown(1)
 	TeleLeft(1)
 
@@ -146,6 +152,7 @@ RepositionLeftToRight()
 
 	upJumpTele(1)
 	TeleRight(1)
+	Sleep 700
 	TeleDown(1)
 	TeleRight(1)
 	FaceLeft()
@@ -179,13 +186,13 @@ RightAttackSequence(x)
 	{
 		ShikiExoCombo()
 		TeleUp(1)
-		Sleep 300
+		Sleep 350
 		TeleDown(1)
 		TeleRight(1)
 
 		ShikiExoCombo()
 		TeleUp(1)
-		Sleep 300
+		Sleep 350
 		TeleDown(1)
 		TeleLeft(1)
 	}
@@ -316,7 +323,7 @@ TeleLeft(x)
 	Loop %x%
 	{
 		Send {Left down}
-		Sleep 10
+		Sleep 35
 		Send {z}
 		Send {Left up}
 		Sleep 500
@@ -328,7 +335,7 @@ TeleRight(x)
 	Loop %x%
 	{
 		Send {Right down}
-		Sleep 10
+		Sleep 35
 		Send {z}
 		Send {Right up}
 		Sleep 500
@@ -340,7 +347,7 @@ TeleDown(x)
 	Loop %x%
 	{
 		Send {Down down}
-		Sleep 10
+		Sleep 35
 		Send {z}
 		Send {Down up}
 		Sleep 500
@@ -352,7 +359,7 @@ TeleUp(x)
 	Loop %x%
 	{
 		Send {Up down}
-		Sleep 10
+		Sleep 35
 		Send {z}
 		Send {Up up}
 		Sleep 500
@@ -392,6 +399,13 @@ MoveRightLong()
 	Send, {Right down}
 	Sleep, (500)
 	Send, {Right up}
+}
+
+MoveLeftVeryShort()
+{
+	Send, {Left down}
+	Sleep (75)
+	Send, {Left up}
 }
 
 MoveLeftShort()

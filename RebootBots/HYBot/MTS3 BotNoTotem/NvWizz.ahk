@@ -1,4 +1,4 @@
-SetKeyDelay, (60)
+SetKeyDelay, (59)
 ^q::reload
 
 ^j::
@@ -19,6 +19,7 @@ SetKeyDelay, (60)
 
     50SRotation()
     ;100s, no tiger, coin rotation + circlemap
+    Sleep 1500
     Gate()
     deployCoinRotation()
     circleMapTPGate()
@@ -41,6 +42,7 @@ SetKeyDelay, (60)
     Send {Right up}
     Sleep 1500
     Send {Down up}
+    Sleep 700
     
 
 }
@@ -148,13 +150,15 @@ Gate()
 
 circleMap()
 {
- 
+    moveLeftShort()
+    Sleep 700
     moveRightLong()
-    Sleep 200
+    Sleep 300
+    moveLeftMedium()
+    Sleep 300
     downJump()
     Sleep 1500
-    moveLeftMedium()
-    Sleep 750
+
     Send {w}
     Sleep 700
     faceRight()
@@ -171,7 +175,10 @@ circleMap()
     jumpAttack()
 
     cloudUp()
-    Sleep 1000
+    Sleep 250
+    moveLeftMedium()
+    Sleep 100
+    moveRightMedium()
     moveRightLong()
     Sleep 300
 
@@ -183,7 +190,7 @@ circleMap()
     faceRight()
     Sleep 500
     moveRightMedium()
-    Sleep 800
+    Sleep 1100
     
     flashJump()
     Sleep 1000
@@ -193,12 +200,16 @@ circleMap()
 
 circleMapTPGate()
 {
+    moveLeftShort()
+    Sleep 700
     moveRightLong()
-    Sleep 200
+    Sleep 300
+    moveLeftMedium()
+    Sleep 300
     downJump()
     Sleep 1500
-    moveLeftMedium()
-    Sleep 1500
+    Send {w}
+    Sleep 700
     faceRight()
     jumpAttack()
     jumpAttack()
@@ -213,7 +224,10 @@ circleMapTPGate()
     jumpAttack()
 
     cloudUp()
-    Sleep 900
+    Sleep 250
+    moveLeftMedium()
+    Sleep 100
+    moveRightMedium()
     moveRightLong()
     Sleep 300
 
@@ -225,7 +239,7 @@ circleMapTPGate()
     faceRight()
     Sleep 500
     MoveRightLong()
-    Sleep 800
+    Sleep 1100
 }
 
 deployTigerRotation()
@@ -237,6 +251,7 @@ deployTigerRotation()
     Send {y}
     Sleep 680
     faceRight()
+    Sleep 250
     flashJump()
     ropeLift()
     Send {1}
@@ -244,11 +259,10 @@ deployTigerRotation()
     Send {1}
     Sleep 600
     Send {2}
-    Sleep 750
+    Sleep 1400
     Send {t}
     Sleep 750
-    Send {w}
-    Sleep 700
+
 }
 deployCoinRotation()
 {
@@ -264,14 +278,14 @@ deployCoinRotation()
     Sleep 630
     moveRightMedium()
     faceRight()
+    Sleep 250
     flashJump()
     ropelift()
     Send {2}
     Sleep (750)
     Send {t}
-    Sleep 750
-    Send {w}
-    Sleep 700
+    Sleep 1000
+
 }
 
 
@@ -320,11 +334,12 @@ flashJump()
 
 jumpAttack()
 {
+    Sleep 50
     Send, {alt}
 	Send, {z}
 	Sleep, (100)
 	Send, {a}
-	Sleep, (650)
+	Sleep, (625)
 }
 
 ran(min, max)
@@ -433,28 +448,28 @@ moveRightShort()
 moveRightMedium()
 {
 	Send, {Right down}
-	Sleep (350)
+	Sleep (400)
 	Send, {Right up}
 }
 
 moveRightLong()
 {
 	Send, {Right down}
-	Sleep (600)
+	Sleep (720)
 	Send, {Right up}
 }
 
 moveLeftShort()
 {
     Send {Left down}
-    Sleep (130)
+    Sleep (175)
     Send {Left up}
 }
 
 moveLeftMedium()
 {
     Send {Left down}
-    Sleep (350)
+    Sleep (400)
     Send {Left up}
 }
 

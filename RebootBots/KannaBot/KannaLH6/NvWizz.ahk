@@ -25,6 +25,7 @@ Loop
 
 	FaceRight()
 	VanqCharge()
+
 	Loop 2
 	{
 		ShikiLeft()
@@ -143,7 +144,11 @@ circleMap()
 		TeleRight()
 		ShikiLeft()
 	}
-
+	Send {Left down}
+	Send {Down down}
+	Sleep 375
+	Send {Left up}
+	Send {Down up}
 	TeleDown()
 	moveLeftVeryShort()
 	TeleRight()
@@ -220,7 +225,13 @@ circleMapDomain() ;~40 seconds
 	{
 		TeleRight()
 		ShikiLeft()
-	}	
+	}
+	Send {Left down}
+	Send {Down down}
+	Sleep 375
+	Send {Left up}
+	Send {Down up}
+
 	TeleDown()
 	moveLeftVeryShort()
 	TeleRight()
@@ -290,6 +301,8 @@ SummonBoss()
 	Send {f}
 	Send {f}
 		Send {f}
+			Send {f}
+		Send {f}
 }
 
 SummonBossFromRightPos()
@@ -314,9 +327,9 @@ ExoCharm()
 
 TeleLeft()
 {
-	Sleep 35
+	Sleep 40
 	Send {Left down}
-	Sleep 100
+	Sleep 130
 	Send {z}
 	Send {Left up}
 	Sleep 450
@@ -324,9 +337,9 @@ TeleLeft()
 
 TeleRight()
 {
-	Sleep 35
+	Sleep 40
 	Send {Right down}
-		Sleep 100
+		Sleep 130
 	Send {z}
 	Send {Right up}
 	Sleep 450
@@ -334,9 +347,9 @@ TeleRight()
 
 TeleDown()
 {
-	Sleep 35
+	Sleep 40
 	Send {Down down}
-		Sleep 100
+		Sleep 130
 	Send {z}
 	Send {Down up}
 	Sleep 450
@@ -345,9 +358,9 @@ TeleDown()
 
 TeleUp()
 {
-	Sleep 30
+	Sleep 40
 	Send {Up down}
-		Sleep 100
+		Sleep 150
 	Send {z}
 	Send {Up up}
 	Sleep 450
@@ -356,22 +369,24 @@ TeleUp()
 upJumpTele()
 {
 	Sleep 50
-	Send {alt}
-	Sleep 100
 	Send {up down}
+	Send {alt}
+	Sleep 150
 	Send {z}
 	Send {up up}
-	Sleep 500
+	Sleep 450
 
 }
 downJump()
 {
+	Sleep 50
 	Send {Down down}
+	Sleep 150
 	Send {alt}
 	Sleep 400
 	Send {z}
 	Send {Down up}
-	Sleep (600)
+	Sleep 500
 }
 
 ShikiExoCombo()
@@ -388,7 +403,7 @@ Shiki(x)
 	{
 		Send {Space}
 	}
-	Sleep 350
+	Sleep 450
 }
 ShikiLeft()
 {
@@ -397,7 +412,7 @@ ShikiLeft()
 	{
 	Send, {Space}
 	}	
-	Sleep, 435
+	Sleep, 450
 }
 
 ShikiRight()
@@ -407,7 +422,7 @@ ShikiRight()
 	{
 	Send, {Space}
 	}	
-	Sleep, 435
+	Sleep, 450
 }
 
 FaceRight()
@@ -424,21 +439,30 @@ FaceLeft()
 moveLeftVeryShort()
 {
 	Send, {Left down}
-	Sleep 375
-	Send, {Left up}	
+	Sleep 200
+	Send, {Left up}
+	Sleep 50	
 }
 moveLeftShort()
 {
 	Send, {Left down}
 	Sleep (350)
 	Send, {Left up}
+	Sleep 50
 }
-
+moveRightShort()
+{
+	Send, {Right down}
+	Sleep 115
+	Send, {Right up}
+	Sleep 50
+}	
 moveRightMedium()
 {
 	Send, {Right down}
-	Sleep 510
+	Sleep 550
 	Send, {Right up}
+	Sleep 50
 }
 
 MoveRightLong()
@@ -446,6 +470,7 @@ MoveRightLong()
 	Send, {Right down}
 	Sleep, (500)
 	Send, {Right up}
+	Sleep 50
 }
 
 MoveLeftLong()
@@ -453,6 +478,7 @@ MoveLeftLong()
 	Send, {Left down}
 	Sleep, (1250)
 	Send, {Left up}
+	Sleep 50
 }
 ran(min, max)
 {

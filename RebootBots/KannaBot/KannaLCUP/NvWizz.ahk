@@ -193,7 +193,7 @@ return
 
 LucidSoul()
 {
-	Send {5}
+	Send {4}
 	Sleep 700
 }
 
